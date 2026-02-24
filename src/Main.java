@@ -33,5 +33,21 @@ public class Main {
         } else {
             System.out.println(year + " год не является високосным");
         }
+
+        // Задача 4
+        int deliveryDistance = 95;
+        int deliveryDays = 1; // Дистанция до 20 км — это минимум 1 день
+
+        if (deliveryDistance > 100) {
+            System.out.println("Доставки нет");
+        } else {
+            if (deliveryDistance > 20) {
+                deliveryDays++; // Добавляем еще 1 день (итого 2)
+            }
+            if (deliveryDistance > 60) {
+                deliveryDays++; // Добавляем еще 1 день (итого 3)
+            }
+            System.out.println("Потребуется дней: " + deliveryDays);
+        }
     }
 }
