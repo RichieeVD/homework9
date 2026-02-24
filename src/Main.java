@@ -49,5 +49,33 @@ public class Main {
             }
             System.out.println("Потребуется дней: " + deliveryDays);
         }
+
+        // Задача 5
+        int monthNumber = 12;
+
+        switch (monthNumber) {
+            case 12:
+            case 1:
+            case 2:
+                System.out.println("Сезон: Зима");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Сезон: Весна");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("Сезон: Лето");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("Сезон: Осень");
+                break;
+            default:
+                System.out.println("Такого месяца не существует (введите число от 1 до 12)");
+        }
     }
 }
