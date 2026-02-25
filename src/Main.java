@@ -38,12 +38,23 @@ public class Main {
         int deliveryDistance = 95;
         int deliveryDays = 1;
 
-        if (deliveryDistance > 100) {
-            System.out.println("Доставки нет");
-        } else {
-            if (deliveryDistance > 20) deliveryDays++;
-            if (deliveryDistance > 60) deliveryDays++;
+        if (deliveryDistance < 0) {
+            // 1. Проверка на неверный ввод (просьба Ирины)
+            System.out.println("Неверный ввод");
+        } else if (deliveryDistance <= 20) {
+            // 2. До 20 км — 1 день
             System.out.println("Потребуется дней: " + deliveryDays);
+        } else if (deliveryDistance <= 60) {
+            // 3. От 20 до 60 км — 2 дня
+            deliveryDays = 2;
+            System.out.println("Потребуется дней: " + deliveryDays);
+        } else if (deliveryDistance <= 100) {
+            // 4. От 60 до 100 км — 3 дня
+            deliveryDays = 3;
+            System.out.println("Потребуется дней: " + deliveryDays);
+        } else {
+            // 5. Всё, что больше 100 км
+            System.out.println("Доставки нет");
         }
 
         // Задача 5
